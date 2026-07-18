@@ -2,6 +2,18 @@
 
 This is a set of python scripts developed to analyse MUSE data of the planetary nebula NGC 6153. The data have been published in Gómez-Llanos et al. (2024)
 
+# Documentation
+
+Full documentation lives in the [docs/](docs/index.md) directory:
+
+- [Overview](docs/overview.md) — what the pipeline does and how the modules fit together
+- [Installation](docs/installation.md) — detailed version of the steps below
+- [Configuration](docs/configuration.md) — reference of every parameter in `module/constants/observation_parameters.py`
+- [API reference](docs/index.md#contents) — one page per module ([observation](docs/api/observation.md), [obs_int](docs/api/obs_int.md), [diagnostics](docs/api/diagnostics.md), [ionic_abund](docs/api/ionic_abund.md), [figuras_articulo](docs/api/figuras_articulo.md), [utils](docs/api/utils.md))
+- [Notebooks](docs/notebooks.md) — role of `ICF_ABUND_NGC6153.ipynb` and `Results.ipynb`
+
+All Python modules also carry NumPy-style docstrings, so `help(function)` works from an interactive session.
+
 # Recomended installation
 
 HIGHLY RECOMMENDED: Install conda and use the following environment.
@@ -54,12 +66,9 @@ conda create -n MUSE_PN "python==3.10.13" numpy matplotlib pandas scipy astropy 
 conda activate MUSE_PN
 ```
 
-6) Install PyNeb and PyCloudy:
+6) Install PyNeb:
 ```
 pip install -U PyNeb
-```
-```
-pip install -U PyCloudy
 ```
 
 7) Install ai4neb
@@ -82,5 +91,3 @@ Other parameters of interest can be modified in such file
 9) The figures and tables of the paper can be created running the code figuras_asrticulo.py
 
 10) ICFs and elemental abundances using machine learning techniques are computed using the notebook ICF_ABUND_NGC6153.ipynb
-
-# Fable-Optimization
